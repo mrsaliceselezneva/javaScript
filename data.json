@@ -1,0 +1,16 @@
+{
+    "games":[
+        {
+            "id": 1,
+            "name": "эволюция",
+            "price": 990,
+            "img": "evolution"
+        },
+        {
+            "id": 2,
+            "name": "эволюция - время летать",
+            "price": 990,
+            "img": "evolution-fly"
+        }
+    ]
+}
