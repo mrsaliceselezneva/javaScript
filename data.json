@@ -17,6 +17,12 @@
             "name": "маньчкин",
             "price": 990,
             "img": "manchkin"
+        },
+        {
+            "id": 4,
+            "name": "эволюция",
+            "price": 1190,
+            "img": "evolution-fly"
         }
     ]
 }

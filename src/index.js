@@ -49,8 +49,6 @@ modalWindow.appendChild(modalWindowContent);
 document.body.appendChild(modalWindow);
 document.body.appendChild(CartElement);
 
-const sortList = SortList(games, generateItems);
-
 const buttonFilter = document.createElement('button');
 buttonFilter.className = 'button-filter'
 buttonFilter.innerText = 'выбрать эволюцию'
@@ -68,6 +66,8 @@ buttonAll.onclick = function() {
     games = data.games;
     generateItems();
 }
+
+const sortList = SortList(games, generateItems);
 
 sortList.appendChild(buttonFilter);
 sortList.appendChild(buttonAll);
