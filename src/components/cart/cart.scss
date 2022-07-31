@@ -6,6 +6,24 @@
         display: block;
         margin-top: 5px;
     }
+    &__notify {
+        background-color: rgb(65, 136, 184);
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        margin-left: 94.45%;
+        margin-top: 1px;
+        overflow: hidden;
+        position: absolute;
+        font-size: 20px;
+        color: #ffffff;
+        padding: 2px 2px;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .modal-button {
@@ -22,3 +40,62 @@
         background-color: rgb(255, 179, 102);
     }
 }
+
+.modal-window {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+    &__content {
+        position: relative;
+        background-color: rgb(65, 136, 184);
+        margin: auto;
+        padding: 0;
+        border: 5px solid rgb(37, 75, 102);
+        width: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+    &__header {
+        padding: 2px 16px;
+        background-color: rgb(37, 75, 102);
+        color: white;
+        text-align: center;
+    }
+    &__body {
+        padding: 2px 16px;
+    }
+    &__close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        &:hover{
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        &:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    &__info {
+        display: block;
+        text-align: right;
+    }
+}
+

@@ -1,7 +1,7 @@
 import './item.scss'
 import Img from '../assets/img/evolution.jpeg'
 
-const Item = (name, price, onAdd) => {
+const Item = (name, price, onAdd, inCart) => {
     const ItemElement = document.createElement('div');
     ItemElement.className = 'item';
 
@@ -13,12 +13,6 @@ const Item = (name, price, onAdd) => {
     priceElement.className = 'item__price';
     priceElement.innerText =`Цена: ${price}₽`;
 
-    const buttonAddToCartElement = document.createElement('button');
-    buttonAddToCartElement.className = 'item__buttonAddToCart';
-    //buttonAddToCartElement.innerHTML = '&#128722';
-    buttonAddToCartElement.innerText = 'в корзину';
-    buttonAddToCartElement.addEventListener('click', onAdd);
-
     const imgElement = document.createElement('img');
     imgElement.src = Img;
     imgElement.className = 'item__img';
@@ -26,7 +20,15 @@ const Item = (name, price, onAdd) => {
     ItemElement.appendChild(imgElement);
     ItemElement.appendChild(nameElement);
     ItemElement.appendChild(priceElement);
-    ItemElement.appendChild(buttonAddToCartElement);
+
+    if (!inCart){
+        const buttonAddToCartElement = document.createElement('button');
+        buttonAddToCartElement.className = 'item__buttonAddToCart';
+        //buttonAddToCartElement.innerHTML = '&#128722';
+        buttonAddToCartElement.innerText = 'в корзину';
+        buttonAddToCartElement.addEventListener('click', onAdd);
+        ItemElement.appendChild(buttonAddToCartElement);
+    }
 
     return ItemElement;
 };

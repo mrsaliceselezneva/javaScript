@@ -11,6 +11,12 @@
             "name": "эволюция - время летать",
             "price": 990,
             "img": "evolution-fly"
+        },
+        {
+            "id": 3,
+            "name": "маньчкин",
+            "price": 990,
+            "img": "manchkin"
         }
     ]
 }
