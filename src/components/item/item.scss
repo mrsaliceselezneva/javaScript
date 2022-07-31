@@ -1,9 +1,9 @@
-.item{
+.item {
     width: 170px;
     height: 230px;
-    border: 2px solid rgb(65, 136, 184);
-    background-color: rgb(37, 75, 102);
-    color: #ffffff;
+    //background-color: rgb(37, 75, 102);
+    background-image: url("../assets/img/paper.jpeg");
+    color: rgb(139, 69, 19);
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@
        // width: 160px;
        // height: 210px;
        // border: 2px solid rgb(37, 75, 102);
-       border-color: rgb(37, 75, 102);
+       border-color: rgb(139, 69, 19);
     }
 
     & > span {

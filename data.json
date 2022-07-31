@@ -3,12 +3,12 @@
         {
             "id": 1,
             "name": "эволюция",
-            "price": 990,
+            "price": 9900,
             "img": "evolution"
         },
         {
             "id": 2,
-            "name": "эволюция - время летать",
+            "name": "эволюция2",
             "price": 990,
             "img": "evolution-fly"
         },

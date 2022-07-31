@@ -1,6 +1,7 @@
 import Item from './components/item';
 import ItemsList from './components/items-list';
 import Cart from './components/cart';
+import SortList from './components/sortList';
 
 import data from '../data.json';
 
@@ -29,6 +30,10 @@ const modalWindowItemsList = ItemsList();
 const {CartElement, modalWindow, modalWindowContent, updateCart} = Cart(cart, generateModalWindowItemsList);
 
 const generateItems = () => {
+    while (itemsList.firstChild) {
+        itemsList.removeChild(itemsList.lastChild);
+    }
+    console.log('lol');
     games.forEach((game) => {
         const onAdd = () => {
             cart.push(game);
@@ -40,11 +45,13 @@ const generateItems = () => {
 }
 
 
-generateItems();
-
 modalWindowContent.appendChild(modalWindowItemsList);
 modalWindow.appendChild(modalWindowContent);
 
 document.body.appendChild(modalWindow);
 document.body.appendChild(CartElement);
+
+const sortList = SortList(games, generateItems);
+
+document.body.appendChild(sortList);
 document.body.appendChild(itemsList);
