@@ -11,7 +11,7 @@
         width: 20px;
         height: 20px;
         border-radius: 20px;
-        margin-left: 94.45%;
+        margin-left: 96.45%;
         margin-top: 1px;
         overflow: hidden;
         position: absolute;
@@ -55,14 +55,14 @@
     background-color: rgba(0,0,0,0.4);
 
     &__content {
-        position: relative;
+        // position: relative;
         // background-color: rgb(65, 136, 184);
         background-image: url("../assets/img/table.jpeg");
         margin: auto;
         padding: 0;
         border: 5px solid rgb(139, 69, 19);
         border-radius: 5px;
-        width: 70%;
+        width: 80%;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     }
     &__header {
@@ -72,6 +72,7 @@
         text-align: center;
     }
     &__body {
+        display: inline-flex;
         padding: 2px 16px;
     }
     &__close {
@@ -97,3 +98,6 @@
     }
 }
 
+.show{
+    display: inline-flex;
+}

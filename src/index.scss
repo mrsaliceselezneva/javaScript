@@ -3,3 +3,18 @@ body{
     background-color: rgb(242, 246, 240);
     background-image: url("../src/components/assets/img/table.jpeg");
 }
+.button-filter {
+    width: 171px;
+    height: 35px;
+    background-color: rgb(242, 221, 198);
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    margin: auto 10px 10px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(255, 179, 102);
+    }
+}

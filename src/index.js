@@ -33,7 +33,6 @@ const generateItems = () => {
     while (itemsList.firstChild) {
         itemsList.removeChild(itemsList.lastChild);
     }
-    console.log('lol');
     games.forEach((game) => {
         const onAdd = () => {
             cart.push(game);
@@ -44,7 +43,6 @@ const generateItems = () => {
     })
 }
 
-
 modalWindowContent.appendChild(modalWindowItemsList);
 modalWindow.appendChild(modalWindowContent);
 
@@ -52,6 +50,27 @@ document.body.appendChild(modalWindow);
 document.body.appendChild(CartElement);
 
 const sortList = SortList(games, generateItems);
+
+const buttonFilter = document.createElement('button');
+buttonFilter.className = 'button-filter'
+buttonFilter.innerText = 'выбрать эволюцию'
+
+buttonFilter.onclick = function() {
+    games = games.filter((game) => game.name === "эволюция");
+    generateItems();
+}
+
+const buttonAll = document.createElement('button');
+buttonAll.className = 'button-filter'
+buttonAll.innerText = 'выбрать все'
+
+buttonAll.onclick = function() {
+    games = data.games;
+    generateItems();
+}
+
+sortList.appendChild(buttonFilter);
+sortList.appendChild(buttonAll);
 
 document.body.appendChild(sortList);
 document.body.appendChild(itemsList);
